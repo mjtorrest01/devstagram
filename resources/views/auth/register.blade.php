@@ -75,7 +75,6 @@
                         type="password"
                         placeholder="Password de Registros"
                         class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror"
-                        value="{{ old('password') }}"
                     />
 
                     @error('password')
@@ -92,7 +91,6 @@
                         type="password"
                         placeholder="Repite tu Password"
                         class="border p-3 w-full rounded-lg @error('password_confirmation') border-red-500 @enderror"
-                        value="{{ old('password_confirmation') }}"
                     />
 
                 </div>
