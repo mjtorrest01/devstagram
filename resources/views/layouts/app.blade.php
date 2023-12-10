@@ -14,10 +14,25 @@
                     DevStagram
                 </h1>
 
-                <nav class=" flex gap-2 items-center">
-                    <a class=" font-bold uppercase text-gray-600 text-sm hover:text-sky-600" href="{{ route('login') }}">Login</a>
-                    <a class=" font-bold uppercase text-gray-600 text-sm hover:text-sky-600" href="{{ route('register') }}">Crear Cuenta</a>
-                </nav>
+                {{-- @if(auth()->user())
+                    <p>Autenticado</p>
+                @else
+                    <p>No Autenticado</p>
+                @endif --}}
+
+                @auth
+                    <nav class=" flex gap-2 items-center">
+                        <a class=" font-bold text-gray-600 text-sm hover:text-sky-600" href="#">Hola: <span class=" font-normal">{{ auth()->user()->username }}</span></a>
+                        <a class=" font-bold uppercase text-gray-600 text-sm hover:text-sky-600" href="{{ route('logout') }}">Cerrar Sesion</a>
+                    </nav>
+                @endauth
+
+                @guest
+                    <nav class=" flex gap-2 items-center">
+                        <a class=" font-bold uppercase text-gray-600 text-sm hover:text-sky-600" href="{{ route('login') }}">Login</a>
+                        <a class=" font-bold uppercase text-gray-600 text-sm hover:text-sky-600" href="{{ route('register') }}">Crear Cuenta</a>
+                    </nav>
+                @endguest
             </div>
         </header>
 
