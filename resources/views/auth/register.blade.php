@@ -33,13 +33,13 @@
                 </div>
                 <div class="mb-5">
                     <label for="username" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Username
+                        Usuario
                     </label>
                     <input 
                         id="username"
                         name="username"
                         type="text"
-                        placeholder="Tu Username"
+                        placeholder="Tu Usuario"
                         class="border p-3 w-full rounded-lg @error('username') border-red-500 @enderror"
                         value="{{ old('username') }}"
                     />
@@ -67,13 +67,13 @@
                 </div>
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Password
+                        Contraseña
                     </label>
                     <input 
                         id="password"
                         name="password"
                         type="password"
-                        placeholder="Password de Registros"
+                        placeholder="Contraseña de Registros"
                         class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror"
                     />
 
@@ -83,13 +83,13 @@
                 </div>
                 <div class="mb-5">
                     <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Repetir Password
+                        Repetir Contraseña
                     </label>
                     <input 
                         id="password_confirmation"
                         name="password_confirmation"
                         type="password"
-                        placeholder="Repite tu Password"
+                        placeholder="Repite tu Contraseña"
                         class="border p-3 w-full rounded-lg @error('password_confirmation') border-red-500 @enderror"
                     />
 
