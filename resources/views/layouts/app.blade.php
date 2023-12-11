@@ -29,7 +29,7 @@
                             </svg>
                             Crear</a>
 
-                        <a class=" font-bold text-gray-600 text-sm hover:text-sky-600" href="#">Hola: <span class=" font-normal">{{ auth()->user()->username }}</span></a>
+                        <a class=" font-bold text-gray-600 text-sm hover:text-sky-600" href="{{ route('posts.index', auth()->user()->username ) }}">Hola: <span class=" font-normal">{{ auth()->user()->username }}</span></a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button type="submit" class=" font-bold uppercase text-gray-600 text-sm hover:text-sky-600" >Cerrar Sesion</button>
