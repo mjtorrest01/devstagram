@@ -4,15 +4,15 @@ Dropzone.autoDiscover = false;
 
 const dropzone = new Dropzone('#dropzone', {
     dictDefaultMessage: 'Sube aqui tu imagen',
-    accepteFiles: '.png, .jpg, .jpgp, .gif,',
+    accepteFiles: '.png, .jpg, .jpep, .gif,',
     addRemoveLinks: true,
     dictRemoveFile: 'Borrar Archivo',
     maxFiles: 1,
-    uploadMultipleFiles: false,
+    uploadMultiple: false,
 });
 
 dropzone.on('sending', function(file, xhr, formData){
-    console.log(file);
+    console.log(formData);
 })
 
 dropzone.on('success', function(file, response){
